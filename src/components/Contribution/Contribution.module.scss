@@ -1,3 +1,37 @@
-.f {
-    font-size: 10px;
+.contribution {
+    width: 1vw;
+    height: 1vw;
+    margin: 0.1vw;
+    background-color: red;
+    border: 0.2vw solid transparent;
+
+    &:hover {
+        border-color: #00000080
+    }
+
+    &_selected {
+        border-color: #000000;
+        border-radius: 0.3vw;
+    }
+
+    &_quantity_0 {
+        background-color: #EDEDED;
+    }
+
+    &_quantity_1to9 {
+        background-color: #ACD5F2;
+    }
+
+    &_quantity_10to19 {
+        background-color: #7FA8C9;
+    }
+
+    &_quantity_20to29 {
+        background-color: #527BA0;
+    }
+
+    &_quantity_30more {
+        background-color: #254E77;
+    }
 }
+

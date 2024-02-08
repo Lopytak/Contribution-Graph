@@ -1,4 +1,4 @@
-import ContributionGraph from "../../components/ContributionGraph/GontributionGraph"
+import ContributionGraph from "../../components/ContributionGraph/ContributionGraph"
 
 const Main = () => {
     return <ContributionGraph/>
