@@ -1,9 +1,11 @@
+import { contributionQuantity } from "../enums"
+
 export const contributionColorsData = [
-    ['No contributions', 0],
-    ['1-9 contributions', 1],
-    ['10-19 contributions', 10],
-    ['20-29 contributions', 20],
-    ['30+ contributions', 30],
+    ['', contributionQuantity.zero],
+    ['', contributionQuantity.oneToNine],
+    ['', contributionQuantity.tenToNineteen],
+    ['', contributionQuantity.twentyToTwentyNine],
+    ['', contributionQuantity.thirtyPlus],
 ]
 
 export const weekDays = ['Пн','Ср','Пт']
@@ -21,4 +23,29 @@ export const monthNames = [
     'Окт.',
     'Нояб.',
     'Дек.',
+]
+
+export const fullMonthNames = [
+    'Январь',
+    'Февраль',
+    'Март',
+    'Апрель',
+    'Май',
+    'Июнь',
+    'Июль',
+    'Август',
+    'Сентябрь',
+    'Октябрь',
+    'Ноябрь',
+    'Декабрь',
+]
+
+export const weekDayNames = [
+    'Воскресенье',
+    'Понедельник',
+    'Вторник',
+    'Среда',
+    'Четверг',
+    'Пятница',
+    'Суббота'
 ]

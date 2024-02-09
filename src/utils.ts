@@ -1,3 +1,5 @@
+import { fullMonthNames, weekDayNames } from "./data/data"
+
 export function formatCurrentDate(now: Date, i: number) {
     const currentDate = new Date(now.getFullYear(), now.getMonth(), now.getDate() - i)
 
@@ -18,4 +20,15 @@ export function formatCurrentDate(now: Date, i: number) {
         + parsedDay
 
     return parsedCurrentDate
+}
+
+export function formatContributionDate(contributionDate: string) {
+    if (contributionDate === '') return ''
+    const contributionDateObject = new Date(contributionDate)
+    const parsedContributionDate =
+        weekDayNames[contributionDateObject.getDay()] + ', '
+        + fullMonthNames[contributionDateObject.getMonth()] + ' '
+        + contributionDateObject.getDate() + ', '
+        + contributionDateObject.getFullYear()
+    return parsedContributionDate
 }

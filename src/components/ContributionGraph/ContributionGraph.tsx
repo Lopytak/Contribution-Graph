@@ -22,10 +22,8 @@ const ContributionGraph: FC = () => {
         const now = new Date()
         
         const temporaryMonthArray = [
-            ...[
-                ...monthNames.slice(now.getMonth()),
-                ...monthNames.slice(0, now.getMonth())
-            ].reverse()
+            ...monthNames.slice(now.getMonth() + 1),
+            ...monthNames.slice(0, now.getMonth() + 1),
         ]
         setCurrentMonthsArray(prev => prev = temporaryMonthArray)
 
@@ -48,7 +46,6 @@ const ContributionGraph: FC = () => {
         }
         //@ts-ignore
         setContributionArray(prev => prev = [...Object.entries(temporaryDateObject)])
-        console.log(temporaryDateObject)
     }
 
     return (
@@ -72,7 +69,7 @@ const ContributionGraph: FC = () => {
 
                     {
                         contributionArray.map((item, index) => {
-                            return <Contribution key={ index } data={ item[0] } contributions={ item[1] }/>
+                            return <Contribution key={ index } date={ item[0] } contributions={ item[1] }/>
                         })
                     }
                 </div>
@@ -84,7 +81,7 @@ const ContributionGraph: FC = () => {
                 {
                     contributionColorsData.map((item, index) => {
                         //@ts-ignore
-                        return <Contribution key={ index } data={ item[0] } contributions={ item[1] }/>
+                        return <Contribution key={ index } date={ item[0] } contributions={ item[1] }/>
                     })
                 }
                 <div className={ styles.contributionGraphDesription__text }>Меньше</div>

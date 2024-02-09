@@ -1,8 +1,9 @@
 export interface IContributionData {
-    data: string,
-    contributions: number
+    date: string,
+    contributions: number | string
 }
 
 export interface IContributionModalWindowData {
-    data: string
+    data: string[],
+    position: DOMRect | undefined
 }

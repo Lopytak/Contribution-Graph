@@ -1,10 +1,21 @@
 .modalWindow {
-    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #000000;
     padding: 0.7vw;
-    font-size: 1.2vw;
     position: absolute;
     top: 20vw;
     left: 50vw;
     border-radius: 0.5vw;
+
+    &__contributions {
+        color: #FFFFFF;
+        font-size: 1.2vw;
+    }
+
+    &__date {
+        color: #7C7C7C;
+        font-size: 1vw;
+    }
 }
